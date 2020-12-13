@@ -1,0 +1,73 @@
+@font-face {
+    font-family: 'LEMON MILK';
+    src: url('/fonts/LEMONMILK-MediumItalic.woff2') format('woff2'),
+        url('/fonts/LEMONMILK-MediumItalic.woff') format('woff');
+    font-weight: 500;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'LEMON MILK';
+    src: url('/fonts/LEMONMILK-Light.woff2') format('woff2'),
+        url('/fonts/LEMONMILK-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'LEMON MILK Book';
+    src: url('/fonts/LEMONMILK-Medium.woff2') format('woff2'),
+        url('/fonts/LEMONMILK-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'LEMON MILK';
+    src: url('/fonts/LEMONMILK-LightItalic.woff2') format('woff2'),
+        url('/fonts/LEMONMILK-LightItalic.woff') format('woff');
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'LEMON MILK';
+    src: url('/fonts/LEMONMILK-BoldItalic.woff2') format('woff2'),
+        url('/fonts/LEMONMILK-BoldItalic.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'LEMON MILK';
+    src: url('/fonts/LEMONMILK-Bold.woff2') format('woff2'),
+        url('/fonts/LEMONMILK-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Yeyey';
+    src: url('/fonts/YeyeyRegular.woff2') format('woff2'),
+        url('/fonts/YeyeyRegular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+@font-face {
+    font-family: 'Neon 80s';
+    src: url('/fonts/Neon80s.woff2') format('woff2'),
+        url('/fonts/Neon80s.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
