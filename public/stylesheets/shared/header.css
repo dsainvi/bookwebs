@@ -2,6 +2,9 @@
     --nav-title-font-size: 3rem;
     --nav-title-font-weight: bold;
     --nav-link-font-weight: 300;
+    --header-img-width: 500;
+    --header-img-width-large: 700px;
+    --header-img-aspect-ratio: 0.75;
   }
   
   .header-title {
@@ -38,4 +41,13 @@
   
   .header-nav li a:hover, .header-title:hover {
     color: white;
+  }
+
+  .header-img {
+    width: var(--header-img-width);
+    height: calc(var(--header-img-width) / var(--header-img-aspect-ratio));
+  }
+
+  .header-img-large {
+      --header-img-width: var(--header-img-width-large);
   }

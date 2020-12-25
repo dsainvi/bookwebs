@@ -2,7 +2,7 @@ const express = require('express')
 const router = express.Router()
 const Book = require('../models/book')
 const Author = require('../models/author')
-const imageMimeTypes = ['image/jpeg', 'image/png', 'image/gif']
+const imageMimeTypes = ['image/jpeg', 'image/png', 'image/gif']//image
 
 // All Books Route
 router.get('/', async (req, res) => {
@@ -40,7 +40,7 @@ router.post('/', async (req, res) => {
     publishDate: new Date(req.body.publishDate),
     pageCount: req.body.pageCount,
     description: req.body.description
-  })
+  })//cover
   saveCover(book, req.body.cover)
 
   try {
@@ -86,7 +86,7 @@ router.put('/:id', async (req, res) => {
     book.description = req.body.description
     if(req.body.cover != null && req.body.cover !== '') {
       saveCover(book, req.body.cover)
-    }
+    }//cover
     await book.save()
     res.redirect(`/books/${book.id}`)
   } catch {
@@ -145,6 +145,7 @@ async function renderFormPage(res, book, form, hasError = false) {
   }
 }
 
+//cover fun
 function saveCover(book, coverEncoded) {
   if (coverEncoded == null) return 
   const cover = JSON.parse(coverEncoded)

@@ -2,6 +2,7 @@ const express = require('express')
 const router = express.Router()
 const Author = require('../models/author')
 const Book = require('../models/book')
+//const imageMimeTypes = ['image/jpeg', 'image/png', 'image/gif']
 
 // All Authors Route
 router.get('/', async (req, res) => {
@@ -28,8 +29,11 @@ router.get('/new', (req, res) => {
 // Create Author Route
 router.post('/', async (req, res) => {
   const author = new Author({
-    name: req.body.name
+    name: req.body.name,
+    about: req.body.about
   })
+  //saveauthor(author, req.body.author)
+
   try {
     const newAuthor = await author.save()
     res.redirect(`authors/${newAuthor.id}`)
@@ -68,6 +72,10 @@ router.put('/:id', async (req,res) => {
   try {
     author = await Author.findById(req.params.id)
     author.name = req.body.name
+    author.about = req.body.about
+    // if(req.body.author != null && req.body.author !== '') {
+    //   saveauthor(book, req.body.author)
+    // }
     await author.save()
     res.redirect(`/authors/${author.id}`)
   } catch {
@@ -97,5 +105,14 @@ router.delete('/:id', async (req,res) => {
     }
   }
 })
+
+// function saveauthor(author, authorEncoded) {
+//   if (authorEncoded == null) return 
+//   const author = JSON.parse(authorEncoded)
+//   if (author != null && imageMimeTypes.includes(author.type)) {
+//     author.authorImage = new Buffer.from(author.data, 'base64')
+//     author.authorImageType = author.type
+//   }
+// }
 
 module.exports = router

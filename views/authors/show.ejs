@@ -4,6 +4,8 @@
   <%- include('../partials/deleteForm',
             { url: `/authors/${author.id}` }) %>
 </div>
+<div class="author-name">About The Author:</div>
+  <div> <%= author.about %></div>
 <% if (booksByAuthor.length > 0) { %>
   <h2 class="page-header">Books By Author</h2>
   <%- include('../partials/bookGrid', { books: booksByAuthor}) %> 
