@@ -48,7 +48,7 @@ router.post('/', async (req, res) => {
     res.redirect(`books/${newBook.id}`)
   } catch {
     renderNewPage(res, book, true)
-  }
+  } //cover
 })
 
 //show book route
@@ -83,7 +83,7 @@ router.put('/:id', async (req, res) => {
     book.author = req.body.author
     book.publishDate= new Date(req.body.publishDate)
     book.pageCount = req.body.pageCount
-    book.description = req.body.description
+    book.description = req.body.description //cover
     if(req.body.cover != null && req.body.cover !== '') {
       saveCover(book, req.body.cover)
     }//cover

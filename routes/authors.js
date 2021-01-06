@@ -26,13 +26,13 @@ router.get('/new', (req, res) => {
   res.render('authors/new', { author: new Author() })
 })
 
-// Create Author Route
+// Creater Author Route
 router.post('/', async (req, res) => {
   const author = new Author({
     name: req.body.name,
     about: req.body.about
   })
-  //saveCover(author, req.body.cover)
+  //saveCreater(author, req.body.creater)
 
   try {
     const newAuthor = await author.save()
@@ -73,8 +73,8 @@ router.put('/:id', async (req,res) => {
     author = await Author.findById(req.params.id)
     author.name = req.body.name
     author.about = req.body.about
-    // if(req.body.cover != null && req.body.cover !== '') {
-    //   saveCover(book, req.body.cover)
+    // if(req.body.creater != null && req.body.creater !== '') {
+    //   saveCreater(book, req.body.creater)
     // }
     await author.save()
     res.redirect(`/authors/${author.id}`)
@@ -106,12 +106,12 @@ router.delete('/:id', async (req,res) => {
   }
 })
 
-// function saveCover(author, coverEncoded) {
-//   if (coverEncoded == null) return 
-//   const cover = JSON.parse(coverEncoded)
-//   if (cover != null && imageMimeTypes.includes(cover.type)) {
-//     author.coverImage = new Buffer.from(cover.data, 'base64')
-//     author.coverImageType = cover.type
+// function saveCreater(author, createrEncoded) {
+//   if (createrEncoded == null) return 
+//   const creater = JSON.parse(createrEncoded)
+//   if (creater != null && imageMimeTypes.includes(creater.type)) {
+//     author.createrImage = new Buffer.from(creater.data, 'base64')
+//     author.createrImageType = creater.type
 //   }
 // }
 
