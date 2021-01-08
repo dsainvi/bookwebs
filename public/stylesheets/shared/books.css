@@ -25,6 +25,7 @@
 .book-cover:hover, .book-cover-large:hover{
     border-color:  gray;
 }
+
 .book-grid {
     display: grid;
     justify-content: flex-start;

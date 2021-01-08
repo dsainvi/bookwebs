@@ -2,7 +2,7 @@ const express = require('express')
 const router = express.Router()
 const Author = require('../models/author')
 const Book = require('../models/book')
-//const imageMimeTypes = ['image/jpeg', 'image/png', 'image/gif']
+const imageMimeTypes = ['image/jpeg', 'image/png', 'image/gif']
 
 // All Authors Route
 router.get('/', async (req, res) => {
@@ -32,8 +32,7 @@ router.post('/', async (req, res) => {
     name: req.body.name,
     about: req.body.about
   })
-  //saveCreater(author, req.body.creater)
-
+  saveCreater(author, req.body.creater)
   try {
     const newAuthor = await author.save()
     res.redirect(`authors/${newAuthor.id}`)
@@ -45,6 +44,7 @@ router.post('/', async (req, res) => {
   }
 })
 
+//show
 router.get('/:id', async (req,res) => {
   try {
     const author = await Author.findById(req.params.id)
@@ -58,6 +58,7 @@ router.get('/:id', async (req,res) => {
   }
 })
 
+//edit
 router.get('/:id/edit', async (req,res) => {
   try{
     const author = await Author.findById(req.params.id)
@@ -67,15 +68,16 @@ router.get('/:id/edit', async (req,res) => {
   }
 })
 
+//update
 router.put('/:id', async (req,res) => {
   let author
   try {
     author = await Author.findById(req.params.id)
     author.name = req.body.name
     author.about = req.body.about
-    // if(req.body.creater != null && req.body.creater !== '') {
-    //   saveCreater(book, req.body.creater)
-    // }
+    if(req.body.creater != null && req.body.creater !== '') {
+       saveCreater(author, req.body.creater)
+     }
     await author.save()
     res.redirect(`/authors/${author.id}`)
   } catch {
@@ -106,13 +108,13 @@ router.delete('/:id', async (req,res) => {
   }
 })
 
-// function saveCreater(author, createrEncoded) {
-//   if (createrEncoded == null) return 
-//   const creater = JSON.parse(createrEncoded)
-//   if (creater != null && imageMimeTypes.includes(creater.type)) {
-//     author.createrImage = new Buffer.from(creater.data, 'base64')
-//     author.createrImageType = creater.type
-//   }
-// }
+function saveCreater(author, createrEncoded) {
+  if (createrEncoded == null) return 
+  const creater = JSON.parse(createrEncoded)
+  if (creater != null && imageMimeTypes.includes(creater.type)) {
+    author.createrImage = new Buffer.from(creater.data, 'base64')
+    author.createrImageType = creater.type
+  }
+}
 
 module.exports = router

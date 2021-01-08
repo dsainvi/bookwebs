@@ -8,23 +8,22 @@ const authorSchema = new mongoose.Schema({
   },
   about: {
     type: String
+  },
+  createrImage: {
+    type: Buffer,
+    required: true
+  },
+  createrImageType: {
+    type: String,
+    required: true
   }
-  // ,
-  // coverImage: {
-  //   type: Buffer,
-  //   required: true
-  // },
-  // coverImageType: {
-  //   type: String,
-  //   required: true
 })
 
-// authorSchema.virtual('coverImagePath').get(function() {
-//   if (this.coverImage != null && this.coverImageType != null) {
-//     return `data:${this.coverImageType};charset=utf-8;base64,${this.coverImage.toString('base64')}`
-//   }
-// })
-
+authorSchema.virtual('createrImagePath').get(function() {
+  if (this.createrImage != null && this.createrImageType != null) {
+    return `data:${this.createrImageType};charset=utf-8;base64,${this.createrImage.toString('base64')}`
+  }
+})
 
 authorSchema.pre('remove', function(next) {
   Book.find({ author: this.id }, (err, books) => {

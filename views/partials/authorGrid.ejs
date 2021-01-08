@@ -1,0 +1,9 @@
+<% authorCreaterClass = locals.large ?'author-creater-large' : '' %>
+<% authorGridClass = locals.large ? 'author-grid-large' :'' %>
+<div class="author-grid <%= authorGridClass%>">
+    <% authors.forEach(author => { %>
+        <a href="/authors/<%= author.id %>">
+            <img class="author-creater <%= authorCreaterClass %>" src="<%= author.coverImagePath %>">
+        </a>
+    <% }) %>
+</div>

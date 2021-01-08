@@ -1,3 +1,11 @@
+:root {
+    --author-creater-width: 200px;
+    --author-creater-width-large: 325px;
+    --author-creater-aspect-ratio: 0.75;
+    --author-creater-border: 2px solid black;
+    --author-creater-padding: 1.5px;
+}
+
 .author-row {
     display: flex;
     justify-content: space-between;
@@ -8,6 +16,27 @@
     font-size: 3.5rem;
 }
 
-/* .author-about {
-    font-size: 1.5rem;
-} */
+.author-creater {
+    width: var(--author-creater-width);
+    height: calc(var(--author-creater-width) / var(--author-creater-aspect-ratio));
+    border: var(--author-creater-border);
+    cursor: pointer;
+    padding: var(--author-creater-padding);
+}
+
+.author-creater-large{
+    width: var(--author-creater-width-large);
+    border: var(--author-creater-border);
+    cursor: pointer;
+    padding: var(--author-creater-padding);
+}
+.author-creater:hover, .author-creater:hover {
+    border-color:  gray;
+}
+
+.author-grid {
+    display: grid;
+    justify-content: flex-start;
+    grid-gap: 2rem;
+    grid-template-columns: repeat(auto-fill, var(--author-creater-width));
+}
