@@ -2,7 +2,7 @@
     --author-creater-width: 200px;
     --author-creater-width-large: 325px;
     --author-creater-aspect-ratio: 0.75;
-    --author-creater-border: 2px solid black;
+    --author-creater-border: 2px solid white;
     --author-creater-padding: 1.5px;
 }
 
@@ -20,14 +20,12 @@
     width: var(--author-creater-width);
     height: calc(var(--author-creater-width) / var(--author-creater-aspect-ratio));
     border: var(--author-creater-border);
-    cursor: pointer;
     padding: var(--author-creater-padding);
 }
 
 .author-creater-large{
     width: var(--author-creater-width-large);
     border: var(--author-creater-border);
-    cursor: pointer;
     padding: var(--author-creater-padding);
 }
 .author-creater:hover, .author-creater:hover {

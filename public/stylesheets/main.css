@@ -24,7 +24,7 @@ body {
   background-repeat: no-repeat;
   background-position: center center;
   backface-visibility: hidden;
-  background-color: rgba(0,0,0,.3);
+  background-color: white;
   height: 130vh;
 }
 
