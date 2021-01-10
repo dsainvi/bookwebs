@@ -24,8 +24,8 @@ body {
   background-repeat: no-repeat;
   background-position: center center;
   backface-visibility: hidden;
-  background-color: white;
-  height: 150vh;
+  background-color: transparent;
+  max-height: 100%;
 }
 
 .container {

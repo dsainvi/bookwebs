@@ -2,7 +2,7 @@
     --book-cover-width: 200px;
     --book-cover-width-large: 325px;
     --book-cover-aspect-ratio: 0.75;
-    --book-cover-border: 2px solid black;
+    --book-cover-border: 2px solid white;
     --book-cover-padding: 1.5px;
 }
 
@@ -23,7 +23,7 @@
 }
 
 .book-cover:hover, .book-cover-large:hover{
-    border-color:  gray;
+    border-color:  burlywood;
 }
 
 .book-grid {

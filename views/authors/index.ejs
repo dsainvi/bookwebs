@@ -11,15 +11,12 @@
     type="submit">Search</button>
   </div>
 </form>
-<br>
+<br>    
 <% authors.forEach(author => { %>
+  <div class="author-name"><%= author.name %></div>
   <div class="author-row">
-    <div class="author-name"><%= author.name %></div>
-    <div class="btn-row">
-      <a class="btn btn-primary" href="/authors/<%= author.id %>">View</a>
-      <a class="btn btn-primary" href="/authors/<%= author.id %>/edit">Edit</a>
-      <%- include('../partials/deleteForm',
-                  { url: `/authors/${author.id}` }) %>  
-    </div>
+      <a class="" href="/authors/<%= author.id %>">
+        <img class="author-creater " src="<%= author.createrImagePath %>" href="/authors/<%= author.id %>">
+      </a>
   </div>
 <% }) %>

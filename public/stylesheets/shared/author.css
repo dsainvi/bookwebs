@@ -10,16 +10,18 @@
     display: flex;
     justify-content: space-between;
     margin-bottom: 1rem;
+    align-items: flex-start;
 }
 
 .author-name {
-    font-size: 3.5rem;
+    font-size: 3rem;
 }
 
 .author-creater {
     width: var(--author-creater-width);
     height: calc(var(--author-creater-width) / var(--author-creater-aspect-ratio));
     border: var(--author-creater-border);
+    border-radius: .5rem;
     padding: var(--author-creater-padding);
 }
 
@@ -29,7 +31,7 @@
     padding: var(--author-creater-padding);
 }
 .author-creater:hover, .author-creater:hover {
-    border-color:  gray;
+    border-color:  burlywood;
 }
 
 .author-grid {
@@ -37,4 +39,8 @@
     justify-content: flex-start;
     grid-gap: 2rem;
     grid-template-columns: repeat(auto-fill, var(--author-creater-width));
+}
+
+.author-grid-large {
+    grid-template-columns: repeat(auto-fill, var(--author-creater-width-large));
 }

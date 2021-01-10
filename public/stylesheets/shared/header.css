@@ -6,6 +6,7 @@
     --header-img-width-large: 700px;
     --header-img-aspect-ratio: 0.75;
     --header-img-height: 250px;
+    --color-header-background: hsl(var(--color-base-hue), 100%, 83%);
 }
   
 .header-title {
@@ -17,16 +18,23 @@
   
 .header-nav {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
     align-items: center;
-    margin-bottom: 5rem;
+    margin-bottom: 2rem; 
+    background-size: 100%;
+    flex-wrap: wrap;
+    border-bottom: solid white;
+    justify-content: stretch;
+    /* justify-content: space-between; */
+    /* position: relative;
+    grid-auto-flow: column;
+    grid-template-columns: auto; */
 }
   
 .header-nav ul {
-    display: flex;
+    display: inline-flex;
     margin: 0;
     padding: 0;
+    /* box-sizing: border-box; */
 }
   
 .header-nav li {
@@ -41,7 +49,7 @@
 }
   
 .header-nav li a:hover, .header-title:hover {
-    color: burlywood;
+    color: rgb(221, 161, 82);
 }
 
 .header-img {
