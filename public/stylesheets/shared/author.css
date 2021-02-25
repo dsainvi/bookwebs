@@ -29,10 +29,9 @@
     width: var(--author-creater-width-large);
     border: var(--author-creater-border);
     padding: var(--author-creater-padding);
+    margin-bottom: 10rem;
 }
-.author-creater:hover, .author-creater:hover {
-    border-color:  burlywood;
-}
+
 
 .author-grid {
     display: grid;

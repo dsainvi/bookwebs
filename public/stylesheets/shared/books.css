@@ -1,29 +1,40 @@
 :root {
     --book-cover-width: 200px;
-    --book-cover-width-large: 325px;
+    --book-cover-width-large: 300px;
     --book-cover-aspect-ratio: 0.75;
     --book-cover-border: 2px solid white;
     --book-cover-padding: 1.5px;
 }
 
 .book-cover {
-    width: var(--book-cover-width);
+    width: auto;
+    flex-shrink: 0;
+    bottom: -35px;
+    left: 35px;
+    border-radius: 2px;
+    box-shadow: -2px 6px 19px 0px #7f818e;
+    transition: .3s ease;
+    /* width: var(--book-cover-width);
     height: calc(var(--book-cover-width) / var(--book-cover-aspect-ratio));
     border: var(--book-cover-border);
     cursor: pointer;
     padding: var(--book-cover-padding);
+    margin-bottom: 10rem; */
     
 }
 
 .book-cover-large {
-    --book-cover-width: var(--book-cover-width-large);
-    border: var(--book-cover-border);
-    cursor: pointer;
-    padding: var(--book-cover-padding);
+    width: auto;
+    flex-shrink: 0;
+    bottom: -35px;
+    left: 35px;
+    border-radius: 2px;
+    box-shadow: -2px 6px 19px 0px #7f818e;
+    transition: .3s ease;
 }
 
 .book-cover:hover, .book-cover-large:hover{
-    border-color:  burlywood;
+    transform: scale(1.03);
 }
 
 .book-grid {
@@ -70,4 +81,81 @@
 .book-details-author-button {
     grid-area: author;
     justify-self: stretch;
+}
+
+.book-slide {
+    width: 100%;
+}
+   
+.book {
+    background: #fff;
+}
+   
+/* .book-cell {
+    position: relative;
+    display: flex;
+    padding: 25px;
+    width: 40%;
+    height: 250px;
+    margin-right: 1px;
+}
+.book-cell:nth-child(1) {
+     background-color: #fbadaf;
+}
+.book-cell:nth-child(2) {
+     background-color: #a4e0eb;
+}
+.book-cell:nth-child(3) {
+     background-color: #edb9d6;
+}
+.book-cell:nth-child(4) {
+     background-color: #fdca95;
+}
+.book-cell:nth-child(5) {
+     background-color: #cbb5e2;
+} */
+
+
+.book-photo {
+    width: 180px;
+    flex-shrink: 0;
+    bottom: -35px;
+    left: 35px;
+    border-radius: 2px;
+    box-shadow: -2px 6px 19px 0px #7f818e;
+    transition: .3s ease;
+    
+}
+.book-photo:hover {
+    transform: scale(1.03);
+}
+   
+.book-img {
+    flex-shrink: 0;
+}
+
+
+.book-title {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+   
+.book-title {
+    color: #ffffff;
+    font-weight: 600;
+}
+   
+.book-author {
+    margin-top: 3px;
+    font-size: 14px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+   
+.book-content {
+    padding: 0 20px;
+    color: #ffffff;
+    overflow: hidden;
 }

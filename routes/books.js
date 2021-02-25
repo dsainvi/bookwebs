@@ -2,11 +2,11 @@ const express = require('express')
 const router = express.Router()
 const Book = require('../models/book')
 const Author = require('../models/author')
-const Article = require('./../models/article')
+//const Article = require('./../models/article')
 const imageMimeTypes = ['image/jpeg', 'image/png', 'image/gif']//image
 
 // All Books Route
-router.get('/', async (req, res) => {
+router.get('/', async (req, res) => { 
   let query = Book.find()
   if (req.query.title != null && req.query.title != '') {
     query = query.regex('title', new RegExp(req.query.title, 'i'))

@@ -3,16 +3,16 @@
     <img class="author-creater" src="<%= author.createrImagePath %>">
   </div>
 </h2>
-<div class="page-header">About The Author:</div>
+<div class="page-header">About Chanya:</div>
   <div> <%= author.about %></div>
 <% if (booksByAuthor.length > 0) { %>
-  <h2 class="page-header">Books By Author:</h2>
+  <h2 class="page-header">Books By Chanya:</h2>
   <%- include('../partials/bookGrid', { books: booksByAuthor}) %> 
 <% } %>
 <br>
 <br>
-<footer class="btn-row">
+<!-- <footer class="btn-row">
     <a class= "btn btn-primary" href="/authors/<%= author.id %>/edit">Edit</a>
     <%- include('../partials/deleteForm',
             { url: `/authors/${author.id}` }) %>
-</footer>
+</footer> -->

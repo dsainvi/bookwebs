@@ -1,2 +1,227 @@
-<h2 class="page-header">New Books:</h2>
-<%- include('partials/bookGrid', { books: books, large: true }) %> 
+<main>
+<!-- About  -->
+  <section class="about-section text-center" id="about">
+      <div class="container">
+          <div class="row">
+              <div class="col-lg-8 mx-auto">
+                  <h2 class="text-black-100 mb-4">Chanya Sainnvilus </h2>
+                  <p class="text-black-100">
+                    Hi my name is Chanya Sainvilus and I was born in ......
+                  </p>
+              </div>
+          </div>
+          <img class="img-fluid images" src="/images/sun.jpg" alt="" />
+      </div>
+  </section>
+  <!-- Projects-->
+  <section class="projects-section bg-light" id="projects">
+    <div class="container">
+        <!-- Featured Project Row-->
+        <div class="row align-items-center no-gutters mb-4 mb-lg-5">
+            <div class="col-xl-8 col-lg-7"><img class="img-fluid images mb-3 mb-lg-0" src="/images/still cole.jpg" alt="" /></div>
+            <div class="col-xl-4 col-lg-5">
+                <div class="featured-text text-center text-lg-left">
+                    <h4>Still Cole</h4>
+                    <p class="text-black-50 mb-0">An instante classic si-fi Fantace Explore this new world with Cole</p>
+                </div>
+            </div>
+        </div>
+        <!-- Project One Row-->
+        <div class="row justify-content-center no-gutters mb-5 mb-lg-0">
+            <div class="col-lg-6"><img class="img-fluid images imb-3 mb-lg-0" src="/images/orlova-maria-b37mDyPzdJM-unsplash.jpg" alt="" /></div>
+            <div class="col-lg-6">
+                <div class="bg-black text-center h-100 project">
+                    <div class="d-flex h-100">
+                        <div class="project-text w-100 my-auto text-center text-lg-left">
+                            <h4 class="text-black-100">Misty</h4>
+                            <p class="mb-0 text-black-50">An example of where you can put an image of a project, or anything else, along with a description.</p>
+                            <hr class="d-none d-lg-block mb-0 ml-0" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Project Two Row-->
+        <div class="row justify-content-center no-gutters">
+            <div class="col-lg-6"><img class="img-fluid images" src="/images/jason-briscoe-iFMbwfuYvS8-unsplash.jpg" alt="" /></div>
+            <div class="col-lg-6 order-lg-first">
+                <div class="bg-black text-center h-100 project">
+                    <div class="d-flex h-100">
+                        <div class="project-text w-100 my-auto text-center text-lg-right">
+                            <h4 class="text-black-100">Coding for Women</h4>
+                            <p class="mb-0 text-black-50">Zoom Meeting this March 21 2021</p>
+                            <hr class="d-none d-lg-block mb-0 mr-0" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  </section>
+  <!-- Signup-->
+  <section class="signup-section" id="signup">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-10 col-lg-8 mx-auto text-center">
+                <i class="far fa-paper-plane fa-2x mb-2 text-white"></i>
+                <h2 class="text-black-50 mb-5">Subscribe to receive updates!</h2>
+                <form class="form-inline d-flex">
+                    <input class="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0" id="inputEmail" type="email" placeholder="Enter email address..." />
+                    <button class="btn btn-primary mx-auto" type="submit">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </div>
+  </section>
+  <!-- Contact-->
+  <section class="contact-section bg-black">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 mb-3 mb-md-0">
+                <div class="card py-4 h-100">
+                    <div class="card-body text-center">
+                        <i class="fas fa-map-marked-alt text-primary mb-2"></i>
+                        <h4 class="text-uppercase m-0">Address</h4>
+                        <hr class="my-4" />
+                        <div class="small text-black-50">4923 Market Street, Orlando FL</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-3 mb-md-0">
+                <div class="card py-4 h-100">
+                    <div class="card-body text-center">
+                        <i class="fas fa-envelope text-primary mb-2"></i>
+                        <h4 class="text-uppercase m-0">Email</h4>
+                        <hr class="my-4" />
+                        <div class="small text-black-50"><a href="#!">Chanya@gmail.com</a></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-3 mb-md-0">
+                <div class="card py-4 h-100">
+                    <div class="card-body text-center">
+                        <i class="fas fa-mobile-alt text-primary mb-2"></i>
+                        <h4 class="text-uppercase m-0">Phone</h4>
+                        <hr class="my-4" />
+                        <div class="small text-black-50">(404)-542-4952</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="social d-flex justify-content-center">
+            <a class="mx-2" href="#!"><i class="fab fa-twitter"></i></a>
+            <a class="mx-2" href="#!"><i class="fab fa-facebook-f"></i></a>
+            <a class="mx-2" href="#!"><i class="fab fa-github"></i></a>
+        </div>
+    </div>
+</section>
+<!-- Footer-->
+<footer class="footer bg-black small text-center text-white-50"><div class="container">Copyright © Mammoth </div></footer>
+  <!-- <div class="magazine-layout">
+    <div class="magazine-column">
+      <article class="article">
+        <h2 class="article-title article-title--large">
+          <a href="/authors/" class="article-link">C.k Sainvilus presentes <mark class="mark mark--primary">"A thrilling Young Adult Fantasy"</mark> Preorder now!  </a>
+        </h2>
+        <h3 class="article-title">Still Cole:</h3>
+        <%- include('partials/bookGrid', { books: books, large: true }) %> 
+        <br>
+        <br>
+        <div class="article-excerpt">
+          <p>An instante classic si-fi Fantace Explore this new world with Cole.</p>
+          <p>Cole must trake down her body and reunite with her family or else...
+        </div>
+        <div class="article-author">
+          <div class="article-author-img">
+            <a href="/authors/">
+              <img src="/images/BWchanya.png" />
+            </a>
+          </div>
+          <div class="article-author-info">
+            <dl>
+              <dt>Chanya Sainvilus</dt>
+              <dd>Author</dd>
+            </dl>
+          </div>
+        </div>
+      </article>
+      <article class="article">
+        <h2 class="article-title article-title--medium">
+          <a href="#" class="article-link">About Chanya</a>
+        </h2>
+        <div class="article-creditation">
+          <p>Hi my name is Chanya Sainvilus and I was born in ........ </p>
+        </div>
+      </article>
+    </div>
+    <div class="magazine-column">
+      <article class="article">
+        <figure class="article-img">
+          <img src="https://images.unsplash.com/photo-1484807352052-23338990c6c6?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" />
+        </figure>
+        <h2 class="article-title article-title--medium">
+          <a href="#" class="article-link">How I got started writing. </a>
+        </h2>
+        <div class="article-excerpt">
+          <p>Jorney</p>
+        </div>
+        <div class="article-author">
+           <div class="article-author-img">
+            <img src="https://assets.codepen.io/285131/author-2.png" />
+          </div> 
+          <div class="article-author-info">
+            <dl>
+              <dt>Chanya Sainvilus</dt>
+              <dd>10/02/2021</dd>
+            </dl>
+          </div>
+        </div>
+      </article>
+    </div>
+    <div class="magazine-column">
+      <article class="article">
+        <figure class="article-img">
+          <img src="https://images.unsplash.com/photo-1512521743077-a42eeaaa963c?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1351&q=80" />
+        </figure>
+        <h2 class="article-title article-title--small">
+          <a href="#" class="article-link">To Become <mark class="mark mark--secondary">Happier</mark>, Ask Yourself These Two Questions Every Night</a>
+        </h2>
+        <div class="article-creditation">
+          <p>By Chanya Sainvilus</p>
+        </div>
+      </article>
+      <article class="article">
+        <figure class="article-img">
+          <img src="https://images.unsplash.com/photo-1569234817121-a2552baf4fd4?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" />
+        </figure>
+        <h2 class="article-title article-title--small">
+          <a href="#" class="article-link">Songs that get me in the writing zoon</a>
+        </h2>
+        <div class="article-creditation">
+          <p>By Chanya Sainvilus </p>
+        </div>
+      </article>
+    </div>
+    <div class="magazine-column">
+      <article class="article">
+        <h2 class="article-title article-title--medium">
+          <a href="#" class="article-link">Eye-Catching Storys</a>
+        </h2>
+        <div class="article-excerpt">
+          <p>Twine Hood...</p>
+        </div>
+        <div class="article-author">
+           <div class="article-author-img">
+            <img src="https://assets.codepen.io/285131/author-2.png" />
+          </div> 
+          <div class="article-author-info">
+            <dl>
+              <dt>Chanya Sainvilus</dt>
+              <dd>Writer</dd>
+            </dl>
+          </div>
+        </div>
+      </article>
+  </div>
+  </div> -->
+</main>

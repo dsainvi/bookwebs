@@ -5,10 +5,38 @@
 @import 'shared/form.css';
 @import 'shared/author.css';
 @import 'shared/books.css';
-@import 'shared/background.css';
+@import 'shared/sidebar.css';
+@import 'shared/img.css';
 
 :root {
-  font-family: 'Neon 80s';
+  --blue: #007bff;
+  --indigo: #6610f2;
+  --purple: #6f42c1;
+  --pink: #e83e8c;
+  --red: #dc3545;
+  --orange: #fd7e14;
+  --yellow: #ffc107;
+  --green: #28a745;
+  --teal: #64a19d;
+  --cyan: #17a2b8;
+  --white: #fff;
+  --gray: #6c757d;
+  --gray-dark: #343a40;
+  --primary: #64a19d;
+  --secondary: #6c757d;
+  --success: #28a745;
+  --info: #17a2b8;
+  --warning: #ffc107;
+  --danger: #dc3545;
+  --light: #f8f9fa;
+  --dark: #343a40;
+  --black: #000000;
+  --breakpoint-xs: 0;
+  --breakpoint-sm: 576px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 992px;
+  --breakpoint-xl: 1200px;
+  font-family: "DM Sans", sans-serif;;
   font-size: 20px;
   color: var(--color-text-light);
 }
@@ -16,25 +44,28 @@
 *, *::before, *::after {
   box-sizing: border-box;
 }
+article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
+  display: block;
+}
 
 body {
-  /*background: linear-gradient(to right, var(--color-background-dark), var(--color-background-light));*/
-  background-image: url(https://i.postimg.cc/kXq9Qmnj/bgd1.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
-  backface-visibility: hidden;
-  background-color: transparent;
-  max-height: 100%;
+  font-family: var(--body-font);
+  font-weight: 400;
+  margin: 0;
+  line-height: 1.5;
+	background: #f8f3eb;
+	color: #050505;
+	padding-bottom: 5rem;
 }
 
 .container {
-  max-width: 1200px;
-  margin: auto;
-  margin-bottom: 3rem;
+  width: 95%;
+  /* max-width: 900px; */
+  margin: 0 auto;
 }
 
 .inner-container {
+  width: 95%;
   margin: 0, 2rem;
 }
 
@@ -46,3 +77,16 @@ body {
 .error-message {
   color: hsl(var(--color-danger-hue), 100%, 50%);
 }
+
+img {
+  vertical-align: middle;
+  border-style: none;
+}
+
+/* body extra */
+/* background: linear-gradient(to right, var(--color-background-dark), var(--color-background-light));
+  background-image: url(https://i.postimg.cc/kXq9Qmnj/bgd1.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  backface-visibility: hidden; */
