@@ -1,21 +1,19 @@
-<h2 class="page-header"><%= book.title %></h2>
-<div class="book-details">
-    <div>
-        <img class="book-cover" src="<%= book.coverImagePath %>">
-        <div class="book-details-btn-grid">
-            <!-- <a class="btn btn-primary" href="/books/<%= book.id %>/edit">Edit</a>
-            <%- include('../partials/deleteForm', { url: `/books/${book.id}` }) %> -->
-            <a class="btn btn-primary book-details-author-button" href="/authors/<%= book.author.id %>">View Author</a>
-        </div>
+<div class="container">
+    <h1 class="featured-text text-black-100 my-2  mb-4 text-center">Upcoming Novel</h1>
+
+
+ <div class="row no-gutters mb-4">
+    <div class="col-lg-3 order-lg-first ml-4 mr-4">
+            <img class="img-fluid mt-1 mb-lg-4" src="/images/still cole.jpg" alt=""/>
     </div>
-    <div class="book-details-grid">
-        <div class="book-details-label">Author:</div>
-        <div> <%= book.author.name %></div>
-        <div class="book-details-label">Publish Date:</div>
-        <div> <%= book.publishDate.toDateString() %></div>
-        <div class="book-details-label">Page Count:</div>
-        <div> <%= book.pageCount %></div>
-        <div class="book-details-label">Description:</div>
-        <div> <%= book.description %></div>
-    </div>   
+    <div class="col-lg-8 text-lg-center ">
+        <p>
+           Still Cole is a YA fantice...
+           <br> 
+           Join Cole on an epic quest....
+           <br>
+           "Quot form the Book goes here..."
+        </p>
+    </div> 
+ </div> 
 </div>
