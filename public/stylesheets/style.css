@@ -43,6 +43,8 @@ html {
   line-height: 1.15;
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  text-size-adjust: 100%;
+
 }
 
 article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
@@ -212,6 +214,9 @@ caption {
 th {
   text-align: inherit;
   text-align: -webkit-match-parent;
+  text-align: match-parent;
+  text-align: inherit;
+  
 }
 
 label {
@@ -1924,7 +1929,8 @@ pre code {
     display: block;
     width: 100%;
     overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
+    overflow:scroll;
+    -webkit-overflow-scrolling: auto;
   }
   .table-responsive-sm > .table-bordered {
     border: 0;
@@ -1935,7 +1941,8 @@ pre code {
     display: block;
     width: 100%;
     overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
+    overflow:scroll;
+    -webkit-overflow-scrolling: auto;
   }
   .table-responsive-md > .table-bordered {
     border: 0;
@@ -1946,7 +1953,8 @@ pre code {
     display: block;
     width: 100%;
     overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
+    overflow:scroll;
+    -webkit-overflow-scrolling: auto;
   }
   .table-responsive-lg > .table-bordered {
     border: 0;
@@ -1957,7 +1965,8 @@ pre code {
     display: block;
     width: 100%;
     overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
+    overflow:scroll;
+    -webkit-overflow-scrolling: auto;
   }
   .table-responsive-xl > .table-bordered {
     border: 0;
@@ -1967,7 +1976,8 @@ pre code {
   display: block;
   width: 100%;
   overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
+  overflow:scroll;
+  -webkit-overflow-scrolling: auto;
 }
 .table-responsive > .table-bordered {
   border: 0;
@@ -1983,6 +1993,7 @@ pre code {
   line-height: 1.5;
   color: #495057;
   background-color: #fff;
+  -webkit-background-clip:padding-box;
   background-clip: padding-box;
   border: 1px solid #ced4da;
   border-radius: 0.25rem;
@@ -3053,6 +3064,7 @@ input[type=button].btn-block {
   text-align: left;
   list-style: none;
   background-color: #fff;
+  -webkit-background-clip:padding-box;
   background-clip: padding-box;
   border: 1px solid rgba(0, 0, 0, 0.15);
   border-radius: 0.25rem;
@@ -3531,7 +3543,7 @@ input[type=button].btn-block {
   min-height: 1.5rem;
   padding-left: 1.5rem;
   -webkit-print-color-adjust: exact;
-          color-adjust: exact;
+  print-color-adjust: exact;
 }
 
 .custom-control-inline {
@@ -4385,6 +4397,7 @@ input[type=button].btn-block {
   min-width: 0;
   word-wrap: break-word;
   background-color: #fff;
+  -webkit-background-clip:border-box;
   background-clip: border-box;
   border: 1px solid rgba(0, 0, 0, 0.125);
   border-radius: 0.25rem;
@@ -5430,6 +5443,7 @@ a.close.disabled {
   max-width: 350px;
   font-size: 0.875rem;
   background-color: rgba(255, 255, 255, 0.85);
+  -webkit-background-clip:padding-box;
   background-clip: padding-box;
   border: 1px solid rgba(0, 0, 0, 0.1);
   box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.1);
@@ -5456,6 +5470,7 @@ a.close.disabled {
   padding: 0.25rem 0.75rem;
   color: #6c757d;
   background-color: rgba(255, 255, 255, 0.85);
+  -webkit-background-clip:padding-box;
   background-clip: padding-box;
   border-bottom: 1px solid rgba(0, 0, 0, 0.05);
   border-top-left-radius: calc(0.25rem - 1px);
@@ -5556,6 +5571,7 @@ a.close.disabled {
   width: 100%;
   pointer-events: auto;
   background-color: #fff;
+  -webkit-background-clip:padding-box;
   background-clip: padding-box;
   border: 1px solid rgba(0, 0, 0, 0.2);
   border-radius: 0.3rem;
@@ -5787,6 +5803,7 @@ a.close.disabled {
   font-size: 0.875rem;
   word-wrap: break-word;
   background-color: #fff;
+  -webkit-background-clip:padding-box;
   background-clip: padding-box;
   border: 1px solid rgba(0, 0, 0, 0.2);
   border-radius: 0.3rem;
@@ -6060,6 +6077,7 @@ a.close.disabled {
   text-indent: -999px;
   cursor: pointer;
   background-color: #fff;
+  -webkit-background-clip:padding-box;
   background-clip: padding-box;
   border-top: 10px solid transparent;
   border-bottom: 10px solid transparent;
